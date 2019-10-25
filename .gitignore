@@ -8,3 +8,10 @@ ebin/*.beam
 rel/example_project
 .concrete/DEV_MODE
 .rebar
+
+## Rebar3
+_build
+_checkouts
+
+## GRiSP
+_grisp
