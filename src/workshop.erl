@@ -26,7 +26,7 @@ initiate_sensors() ->
     grisp:add_device(spi2, pmod_als).
 
 temperature_range(Min, Max) ->
-        [Temp] = pmod_nav:read(acc, [out_temp]),
+        [Temp] = pmod_nav:read(alt, [out_temp]),
         if
             Temp > Max -> [grisp_led:color(L, red) || L <- [1,2]];
             Temp < Min -> [grisp_led:color(L, blue) || L <- [1,2]];            
