@@ -42,3 +42,10 @@ You need to modify some files in [grisp/grisp_base/files](https://github.com/ach
 - wpa_supplicant.conf :
     - replace `<wifi_name>` by your wifi name (this name is case sensitive)
     - replace `<pwd>` by your wifi password
+
+Then to connect to a board you need to enter this command in a command prompt:
+
+``` bash
+$ erl -sname my_remote_shell -remsh project@my_grisp_board -setcookie MyCookie
+```
+by replacing *project*, *my_grisp_board* and *MyCookie* with you own values.
