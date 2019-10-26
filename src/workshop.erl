@@ -16,7 +16,7 @@
 start(_Type, _Args) -> 
     {ok, Supervisor} = workshop_sup:start_link(),
     initiate_sensors(),
-    spawn(workshop, temperature_range, [20, 25]),
+    spawn(workshop, temperature_range, [20.0, 25.0]),
     {ok, Supervisor}.
 
 stop(_State) -> ok.
@@ -26,7 +26,7 @@ initiate_sensors() ->
     grisp:add_device(spi2, pmod_als).
 
 temperature_range(Min, Max) ->
-        Temp = pmod_nav:read(acc, [out_temp]),
+        [Temp] = pmod_nav:read(acc, [out_temp]),
         if
             Temp > Max -> [grisp_led:color(L, red) || L <- [1,2]];
             Temp < Min -> [grisp_led:color(L, blue) || L <- [1,2]];            
