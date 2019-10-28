@@ -12,6 +12,7 @@ rel/example_project
 ## Rebar3
 _build
 _checkouts
+rebar3.crashdump
 
 ## GRiSP
 _grisp
