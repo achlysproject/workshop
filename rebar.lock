@@ -1,5 +1,9 @@
 {"1.1.0",
-[{<<"grisp">>,{pkg,<<"grisp">>,<<"1.1.6">>},0},
+[{<<"epmd">>,
+  {git,"https://github.com/erlang/epmd",
+       {ref,"4d1a595b9d5c32fc0e55f462da381de62de23bf0"}},
+  0},
+ {<<"grisp">>,{pkg,<<"grisp">>,<<"1.1.6">>},0},
  {<<"mapz">>,{pkg,<<"mapz">>,<<"0.3.0">>},1}]}.
 [
 {pkg_hash,[
