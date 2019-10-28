@@ -43,6 +43,12 @@ You need to modify some files in [grisp/grisp_base/files](https://github.com/ach
     - replace `<wifi_name>` by your wifi name (this name is case sensitive)
     - replace `<pwd>` by your wifi password
 
+You also need to add to the `/etc/hosts/` file:
+```
+X.X.X.X my_grisp_board
+```
+where `X.X.X.X` is the local ip of your grisp_board and `my_grisp_board` the name you give to it.
+
 Then to connect to a board you need to enter this command in a command prompt:
 
 ``` bash
